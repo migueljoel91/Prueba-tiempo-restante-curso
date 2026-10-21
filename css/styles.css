@@ -126,13 +126,12 @@ p {
 
     .container label {
         text-align: center;
-        width: 60%;
     }
 
     input[type="text"],
     button,
     .btn {
-        width: 100%;
+        width: 60%;
     }
 
     p {
