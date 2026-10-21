@@ -119,6 +119,10 @@ p {
         grid-template-columns: 1fr;        /* todo apilado en una columna */
         width: 90%;
     }
+    
+    main {
+        width: 100%;
+    }
 
     .container label {
         text-align: center;
@@ -127,7 +131,7 @@ p {
     input[type="text"],
     button,
     .btn {
-        width: 90%;
+        width: 100%;
     }
 
     p {
