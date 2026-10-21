@@ -1,0 +1,140 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(66, 66, 66);
+    font-family: calibri, sans-serif;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    margin-top: 7rem;
+    color: white;
+    border-bottom: 1px solid white;
+}
+
+input[type="text"] {
+    width: 9rem;            
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1.15rem;      
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto;  /* columna de etiquetas + columna de inputs + columna de botones */
+  align-items: center;                    /* alinea etiqueta e input en vertical */
+  gap: 1rem 1rem;                      /* 1rem entre filas, 1rem entre columnas */
+}
+
+.container label {
+  text-align: right; 
+  margin: 0.3rem 0 0 0;
+  padding: 0;
+  margin-bottom: 0.5rem;
+  font-size: 1.3rem;
+  color: white;                
+}
+
+button {
+    width: 9rem;
+    height: 2rem;
+    border-radius: 0.5rem;
+    border: none;
+    font-size: 1rem;
+    color: white;
+    background-color: rgb(32, 32, 32);
+    cursor: pointer;
+}
+
+
+button:hover {
+    background-color: rgba(255, 0, 0, 0.436);
+    transition: background-color 0.3s ease;
+}
+
+p {
+    font-size: 1.8rem;
+    color: black;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background-color: rgb(106, 106, 106);
+    width: fit-content;
+    text-align: center;
+    border-radius: 0.5rem;
+    border: 1px solid;
+    padding: 0.3rem;
+}
+
+.btn {
+    width: 13rem;
+    height: 2rem;
+    grid-column: 1 / -1;  /* desde la línea 1 hasta la última: ocupa todas las columnas */
+    justify-self: center;
+}
+
+/* Tablet y móvil grande */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+        margin-top: 4rem;
+    }
+
+    .container {
+        grid-template-columns: auto auto;  /* etiqueta + input */
+    }
+
+    .btn {
+        width: 9rem;
+    }
+}
+
+/* Móvil pequeño */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+    }
+
+    .container {
+        grid-template-columns: 1fr;        /* todo apilado en una columna */
+        width: 90%;
+    }
+
+    .container label {
+        text-align: center;
+    }
+
+    input[type="text"],
+    button,
+    .btn {
+        width: 100%;
+    }
+
+    p {
+        font-size: 1.3rem;
+    }
+}
+
+/* En flex, justify-content alinea en el eje principal y align-items en el cruzado. Con column, el principal es el vertical, así que justify-content mueve arriba/abajo y align-items izquierda/derecha. Con row es al revés.
+
+En grid, justify-* siempre es horizontal y align-* siempre es vertical, no importa cómo esté definido. */

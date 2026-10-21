@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TIEMPO RESTANTE DEL CURSO</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <script src="./js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>TIEMPO RESTANTE PARA FINALIZACION DEL CURSO</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <label for="fechaActual">Fecha actual:</label>
+            <input type="text" id="fechaActual" disabled>
+            <button type="button" id="actualizar">Actualizar</button>
+
+            <label for="fechaFinal">Fecha final:</label>
+            <input type="text" id="fechaFinal" disabled>
+
+            <button type="button" id="calcular">Calcular restante</button>
+        </div>
+
+        <p id="resultado" hidden></p>
+
+        <div class="container">
+            <button type="button" class ="btn" id="mostrar" hidden>Calcular con aplazamiento</button>
+        </div>
+
+        <p id="resultadoAplazamiento" hidden></p>
+    </main>
+
+    <footer>
+    </footer>
+</body>
+</html>
