@@ -126,6 +126,7 @@ p {
 
     .container label {
         text-align: center;
+        width: 90%;
     }
 
     input[type="text"],
