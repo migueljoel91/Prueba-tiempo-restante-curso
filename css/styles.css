@@ -132,6 +132,7 @@ p {
     button,
     .btn {
         width: 60%;
+        justify-self: center;
     }
 
     p {
