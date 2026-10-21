@@ -117,15 +117,16 @@ p {
 
     .container {
         grid-template-columns: 1fr;        /* todo apilado en una columna */
-        max-width: 90%;
+        width: 90%;
     }
     
     main {
-        max-width: 100%;
+        width: 100%;
     }
 
     .container label {
         text-align: center;
+        width: 60%;
     }
 
     input[type="text"],
